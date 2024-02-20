@@ -11,7 +11,7 @@ for arquivo in os.listdir(pasta_csv):
             ler_csv = csv.reader(arquivo_csv, delimiter='\t')  # Define o delimitador como tabulação
             csv_unificado.extend(list(ler_csv)[6:])  # Pula as primeiras 6 linhas
 
-with open(r'V:\\Centro de Custos\\Cooperativa de Crédito\\PA00 - ADMINISTRATIVO\\DESENVOLVIMENTO DE SISTEMAS\\Relatoriounificado\\Base_Minha_Carteira.csv', mode='w', newline='', encoding='utf-16') as csv_final:
+with open(r'C:\\Users\\vinicius.pereira\\Documents\\GitHub\\unificador-csv\\unificados\\Base_Minha_Carteira.csv', mode='w', newline='', encoding='utf-16') as csv_final:
     base = csv.writer(csv_final, delimiter='\t')  # Define o delimitador como tabulação
     for linha in csv_unificado:
         base.writerow(linha)
